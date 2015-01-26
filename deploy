@@ -101,7 +101,7 @@ ssh_command() {
   test -n "$key" && local identity="-i $key"
   test -n "$port" && local port="-p $port"
   test -n "$needs_tty" && local tty="-t"
-  echo "ssh $tty $agent $port $identity $url -v -o 'StrictHostKeyChecking no'"
+  echo "ssh $tty $agent $port $identity $url -v -o StrictHostKeyChecking=no"
 }
 
 #
